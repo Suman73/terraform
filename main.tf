@@ -41,5 +41,5 @@ variable "region" {
 
 # terraform.tfvars
 
-bucket_name = "my-bucket-name"  # Replace with your desired bucket name
+bucket_name = "my-bucket-name39084710947097"  # Replace with your desired bucket name
 region      = "ap-south-1"     # Replace with your desired AWS region
