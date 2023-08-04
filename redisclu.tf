@@ -29,8 +29,7 @@ resource "aws_elasticache_cluster" "example" {
   num_cache_nodes      = 1
   parameter_group_name = "default.redis6.x"
 
-  subnet_group_name = aws_elasticache_subnet_group.example.name
-  security_group_ids = [aws_security_group.example.id]
+  
 
   # Disable multi-AZ and auto-failover
   multi_az_enabled            = false
