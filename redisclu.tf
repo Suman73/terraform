@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "ap-south-1"  # Replace with your desired AWS region
-}
 
 resource "aws_vpc" "example" {
   cidr_block = "172.31.0.0/16"  # Replace with your desired VPC CIDR block
