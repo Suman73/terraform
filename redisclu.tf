@@ -21,12 +21,6 @@ resource "aws_subnet" "example" {
   availability_zone = "ap-south-1a"     # Replace with the desired availability zone
 }
 
-
-resource "aws_elasticache_subnet_group" "example" {
-  name       = "redis-subnet-group"
-  subnet_ids = [aws_subnet.example.id]
-}
-
 resource "aws_elasticache_cluster" "example" {
   cluster_id           = "my-redis-cluster"
   engine               = "redis"
