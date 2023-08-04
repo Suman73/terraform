@@ -10,6 +10,18 @@ resource "aws_security_group" "example" {
   # Add your security group rules here if needed.
 }
 
+
+resource "aws_vpc" "example_vpc" {
+  cidr_block = "172.31.0.0/16"
+}  
+
+resource "aws_subnet" "example" {
+  vpc_id            = aws_vpc.example_vpc.id
+  cidr_block        = "172.31.48.0/25"  # Replace with the desired subnet CIDR block
+  availability_zone = "ap-south-1a"     # Replace with the desired availability zone
+}
+
+
 resource "aws_elasticache_subnet_group" "example" {
   name       = "redis-subnet-group"
   subnet_ids = [aws_subnet.example.id]
